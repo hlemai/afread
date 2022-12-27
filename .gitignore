@@ -22,6 +22,7 @@ bld/
 [Oo]bj/
 [Ll]og/
 _[Bb]uild/
+build/
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -260,3 +261,8 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# MacOs
+CMakeCache.txt
+*.cmake
+**/CMakeFiles

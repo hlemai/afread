@@ -1,3 +1,4 @@
+#ifdef WIN64
 #include "WindowsDriver.h"
 
 #include "Compression.h"
@@ -132,3 +133,4 @@ uint32_t WindowsDriver::Crc32(const AffinityReader::ByteBuffer& buf)
 }
 
 } // namespace afread
+#endif

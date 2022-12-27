@@ -1,15 +1,15 @@
-#ifdef WIN64
-#ifndef AFREAD_INCLUDE_WINDOWSDRIVER_H_
-#define AFREAD_INCLUDE_WINDOWSDRIVER_H_
+
+#ifndef AFREAD_INCLUDE_MACOSDRIVER_H_
+#define AFREAD_INCLUDE_MACOSDRIVER_H_
 
 #include "Affinity/Archive.h"
 
 namespace afread {
 
-class WindowsDriver: public AffinityReader::Driver
+class MACOSDriver: public AffinityReader::Driver
 {
 public:
-	WindowsDriver();
+	MACOSDriver();
 
 	bool                       Open(const std::string& file_name) override;
 	void                       Close() override;
@@ -23,10 +23,9 @@ public:
 
 protected:
 	std::string m_file_name;
-	void*       m_file = {nullptr};
+	FILE*       m_file = {nullptr};
 };
 
 } // namespace afread
 
-#endif /* AFREAD_INCLUDE_WINDOWSDRIVER_H_ */
-#endif // WIN64
+#endif /* AFREAD_INCLUDE_MACOSDRIVER_H_ */

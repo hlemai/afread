@@ -1,7 +1,8 @@
 ﻿#include "Affinity/Affinity.h"
 #include "Affinity/Json.h"
 #include "Affinity/Reader.h"
-#include "WindowsDriver.h"
+//#include "WindowsDriver.h"
+#include "MacOsDriver.h"
 #include "cxxopts.hpp"
 
 #include <fstream>
@@ -10,7 +11,7 @@ namespace afread {
 
 bool dump_json(const std::string& in, const std::string& out, bool base64, bool notype)
 {
-	WindowsDriver driver;
+	MACOSDriver driver;
 
 	AffinityReader::Affinity af;
 
